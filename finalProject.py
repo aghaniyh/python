@@ -1,6 +1,6 @@
 import requests
 
-#the class below is defined to suggest recipes based on a user’s dietary preferences and ingredient availability. 
+#the class below is defined to use the Spoonacular API to recommend recipes based on dietary preferences and available ingredients. ( https://spoonacular.com/food-api ) 
 class RecipeRecommender:
     def __init__(self, api_key):
         self.api_key = api_key
