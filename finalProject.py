@@ -1,5 +1,6 @@
 import requests
 
+#the class below is defined to suggest recipes based on a user’s dietary preferences and ingredient availability. 
 class RecipeRecommender:
     def __init__(self, api_key):
         self.api_key = api_key
@@ -28,13 +29,12 @@ class RecipeRecommender:
             print(f"Error fetching data: {e}")
             return []
         
-# Example usage:
+#our main code is below
 if __name__ == "__main__":
-    # Replace 'YOUR_API_KEY' with your actual Spoonacular API key
     api_key = 'a188e979ffd445c3ac10cc2ced66c36b'
     recommender = RecipeRecommender(api_key)
-    
-    # Example user preferences
+
+    #enter your diet:
     diet = input("Enter your dietary preference (Choose any of the following: 'No Diet , 'Lacto Vegetarian , 'Paleo' , 'Primal' , 'Pescetarian' , 'Vegan' , 'Vegetarian' , 'Ketogenic' , 'Whole 30'): ").lower()  # Can be 'vegetarian', 'vegan', 'gluten free', etc.
     
     # Ask user for ingredients (comma-separated list)
